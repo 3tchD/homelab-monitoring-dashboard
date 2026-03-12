@@ -109,24 +109,75 @@ http://127.0.0.1:8000
 ## Roadmap
 
 ### Phase 1 – Core Backend
-- [ ] Django monitoring API
-- [ ] Server registration
-- [ ] Metrics ingestion endpoint
+
+- [x] Django monitoring API
+  - [x] Create Django project
+  - [x] Create `metrics` app
+  - [x] Configure Django REST Framework
+
+- [x] Server registration
+  - [x] Create `Server` model
+  - [x] Register model in Django admin
+  - [x] Create `/api/servers` endpoint
+
+- [x] Metrics ingestion endpoint
+  - [x] Create `Metric` model
+  - [x] Create `/api/metrics` API endpoint
+  - [x] Store CPU, RAM, and disk usage metrics
+  - [x] Connect models with database migrations
+
 
 ### Phase 2 – Monitoring Agent
+
 - [ ] Python monitoring script
+  - [ ] Create monitoring agent in `agent/`
+  - [ ] Collect CPU usage
+  - [ ] Collect RAM usage
+  - [ ] Collect disk usage
+
 - [ ] Automatic metric reporting
+  - [ ] Send metrics to `/api/metrics`
+  - [ ] Run reporting loop every few seconds
+  - [ ] Configure server ID for agent
+
 
 ### Phase 3 – Dashboard
+
 - [ ] Web dashboard UI
+  - [ ] Create dashboard HTML page
+  - [ ] Fetch metrics from API
+  - [ ] Display server status
+
 - [ ] CPU / RAM / Disk charts
+  - [ ] Integrate Chart.js
+  - [ ] Display historical metrics
+  - [ ] Auto-refresh data
+
 - [ ] Server overview page
+  - [ ] List monitored servers
+  - [ ] Show latest server metrics
+  - [ ] Add server selection
+
 
 ### Phase 4 – Advanced Features
+
 - [ ] Real-time monitoring
+  - [ ] Add WebSocket support
+  - [ ] Push live metrics to dashboard
+
 - [ ] Alerting system
+  - [ ] CPU threshold alerts
+  - [ ] RAM threshold alerts
+  - [ ] Email or notification alerts
+
 - [ ] Authentication
+  - [ ] Protect dashboard endpoints
+  - [ ] Add user login system
+
 - [ ] Docker deployment
+  - [ ] Dockerfile for Django backend
+  - [ ] Docker Compose configuration
+  - [ ] Containerized deployment
 
 ## Screenshots
 
